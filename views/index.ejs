@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html lang ="eng">
+<head>
+</head>
+<body>
+    <% if (user) { %>
+      <p>Welcome, <%= user %> </p> 
+    
+<form action="/logout" method="post"> 
+    <input type="submit" value="Submit">
+</form>
+
+ 
+    <% } %>
+<h1>Log in Form</h1>
+
+<form action="/login" method="post">
+    <label for="username">Username:</label>
+    <input type="text" name="username">
+
+    <label for="password">Password:</label>
+    <input type="password" name="password">
+
+    <input type="submit" value="Submit">
+</form> 
+
+<br>
+
+<h1>Sign up Form</h1>
+<form action="/signup" method="post">
+    <label for="username">Username:</label>
+    <input type="text" name="username">
+
+    <label for="password">Password:</label>
+    <input type="password" name="password">
+
+
+    <label for="confirm">Confirm:</label>
+    <input type="password" name="confirm">
+
+    <input type="submit" value="Submit">
+</form> 
+</body>
+</html>
